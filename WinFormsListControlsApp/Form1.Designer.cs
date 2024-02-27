@@ -31,7 +31,10 @@
             lstCities = new ListBox();
             txtCity = new TextBox();
             btnAdd = new Button();
-            lblCity = new Label();
+            btnInsert = new Button();
+            btnRemove = new Button();
+            btnEdit = new Button();
+            cmbCities = new ComboBox();
             SuspendLayout();
             // 
             // lstCities
@@ -58,28 +61,69 @@
             btnAdd.Font = new Font("Segoe UI", 22F);
             btnAdd.Location = new Point(366, 22);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(213, 47);
+            btnAdd.Size = new Size(213, 67);
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Добавить";
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
             // 
-            // lblCity
+            // btnInsert
             // 
-            lblCity.AutoSize = true;
-            lblCity.Font = new Font("Segoe UI", 30F);
-            lblCity.Location = new Point(366, 189);
-            lblCity.Name = "lblCity";
-            lblCity.Size = new Size(130, 54);
-            lblCity.TabIndex = 3;
-            lblCity.Text = "label1";
+            btnInsert.Font = new Font("Segoe UI", 22F);
+            btnInsert.Location = new Point(366, 114);
+            btnInsert.Name = "btnInsert";
+            btnInsert.Size = new Size(213, 67);
+            btnInsert.TabIndex = 2;
+            btnInsert.Text = "Вставить";
+            btnInsert.UseVisualStyleBackColor = true;
+            btnInsert.Click += btnInsert_Click;
+            // 
+            // btnRemove
+            // 
+            btnRemove.Font = new Font("Segoe UI", 22F);
+            btnRemove.Location = new Point(366, 206);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(213, 67);
+            btnRemove.TabIndex = 2;
+            btnRemove.Text = "Удалить";
+            btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Font = new Font("Segoe UI", 22F);
+            btnEdit.Location = new Point(366, 299);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(213, 67);
+            btnEdit.TabIndex = 2;
+            btnEdit.Text = "Изменить";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // cmbCities
+            // 
+            cmbCities.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbCities.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbCities.DropDownHeight = 100;
+            cmbCities.DropDownStyle = ComboBoxStyle.Simple;
+            cmbCities.Font = new Font("Segoe UI", 22F);
+            cmbCities.FormattingEnabled = true;
+            cmbCities.IntegralHeight = false;
+            cmbCities.Location = new Point(666, 22);
+            cmbCities.MaxDropDownItems = 4;
+            cmbCities.Name = "cmbCities";
+            cmbCities.Size = new Size(339, 48);
+            cmbCities.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(lblCity);
+            ClientSize = new Size(1107, 450);
+            Controls.Add(cmbCities);
+            Controls.Add(btnEdit);
+            Controls.Add(btnRemove);
+            Controls.Add(btnInsert);
             Controls.Add(btnAdd);
             Controls.Add(txtCity);
             Controls.Add(lstCities);
@@ -94,6 +138,9 @@
         private ListBox lstCities;
         private TextBox txtCity;
         private Button btnAdd;
-        private Label lblCity;
+        private Button btnInsert;
+        private Button btnRemove;
+        private Button btnEdit;
+        private ComboBox cmbCities;
     }
 }
